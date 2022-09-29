@@ -1,0 +1,19 @@
+{
+  "version": "21.0.0",
+  "files": {
+    "1641820bc5178243ad1c5758bac9efd525f3760b0c58377a807bb1b913488f25": {
+      "source": {
+        "path": "TypescriptCdkStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "1641820bc5178243ad1c5758bac9efd525f3760b0c58377a807bb1b913488f25.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

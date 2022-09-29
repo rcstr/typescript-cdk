@@ -12,6 +12,11 @@ export class TypescriptCdkStack extends cdk.Stack {
       encryption: BucketEncryption.S3_MANAGED
 	});
 
+    new cdk.CfnOutput(this, 'DocumentsBucketNameExport', {
+        value: bucket.bucketName,
+        exportName: 'DocumentsBucketName'
+    });
+
     // The code that defines your stack goes here
 
     // example resource
