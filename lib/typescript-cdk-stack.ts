@@ -18,9 +18,11 @@ export class TypescriptCdkStack extends cdk.Stack {
         exportName: 'DocumentsBucketName'
     });
 
-    new Networking(this, 'NetworkingConstruct', {
+    const networkingStack = new Networking(this, 'NetworkingConstruct', {
         maxAzs: 2
     });
+
+    cdk.Tags.of(networkingStack).add('Module', 'Networking');
 
     // The code that defines your stack goes here
 
